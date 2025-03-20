@@ -15,7 +15,7 @@
 在使用前，需要安装必要的Python依赖包：
 
 ```bash
-pip install requests pandas geoip2 ipaddress openpyxl
+pip install -r requirements.txt
 ```
 
 ## 使用方法
@@ -47,6 +47,10 @@ python ip_location.py --download --license-key "你的许可证密钥"
 
 ```bash
 python ip_location.py --download
+```
+#### 更新IP地址库
+```bash
+python ip_location.py --update
 ```
 
 #### 查询单个IP地址
@@ -91,9 +95,10 @@ python example_ips.py
 
 ## 注意事项
 
-1. IP地址库数据由MaxMind提供，精确度可能会有所不同
-2. 首次使用时，需要下载IP地址库，这可能需要一些时间
-3. 使用批量处理大量IP地址时，处理速度取决于计算机性能
+1. geoip2IP地址库数据由MaxMind提供，精确度可能会有所不同
+2. 本程序优先通过纯真IP地址库进行检索
+3. 纯真IP地址库下载需要乘坐火箭，请现在程序中配置好代理
+4. 使用批量处理大量IP地址时，处理速度取决于计算机性能
 
 ## 故障排除
 
